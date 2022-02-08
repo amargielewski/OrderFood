@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
+import { Link, NavLink } from "react-router-dom";
 
 const drivingCar = keyframes`
 0% {
@@ -45,6 +46,7 @@ export const StyledContainer = styled.div`
   padding: 10px 10px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 `;
 
 export const StyledSiteLogo = styled.h2`
@@ -54,9 +56,10 @@ export const StyledSiteLogo = styled.h2`
   font-weight: 500;
 `;
 
-export const StyledLogoContainer = styled.div`
+export const StyledLogoContainer = styled(Link)`
   display: flex;
   align-items: center;
+  text-decoration: none;
   gap: 0 20px;
 `;
 
@@ -71,11 +74,12 @@ export const StyledNavbarListContainer = styled.div`
   gap: 0 30px;
 `;
 
-export const StyledListItem = styled.div<{
+export const StyledListItem = styled(NavLink)<{
   rotation?: boolean;
 }>`
   display: flex;
   align-items: center;
+  text-decoration: none;
   padding: 10px;
   height: 100%;
   gap: 0 5px;
@@ -83,7 +87,7 @@ export const StyledListItem = styled.div<{
 
   :hover {
     background-color: #fa7a52;
-    transition: 0.5s;
+    transition: 0.3s ease-in;
     border-radius: 10px;
     color: white;
     transform: translateY(5px);
@@ -91,6 +95,12 @@ export const StyledListItem = styled.div<{
     svg {
       ${({ rotation }) => rotation && SpinAnimation}
     }
+  }
+
+  &.active {
+    background-color: #fa7a52;
+    border-radius: 10px;
+    color: white;
   }
 `;
 
