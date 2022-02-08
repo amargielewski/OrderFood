@@ -17,7 +17,19 @@
         }
       ],
       "localization": {
-        "city": "kraków"
+        "city": "kraków",
+        "address": "florianśka 9",
+        "region": "małopolska"
+      },
+      "foodType": "kebab",
+      "openHours": {
+        "monday": { "open": "12:00", "close": "22:00" },
+        "tuesday": { "open": "12:00", "close": "22:00" },
+        "wednesday": { "open": "11:00", "close": "21:00" },
+        "thurdsay": { "open": "9:00", "close": "22:00" },
+        "friday": { "open": "15:00", "close": "24:00" },
+        "saturday": { "open": "19:00", "close": "02:30" },
+        "sunday": { "open": "14:30", "close": "23:00" }
       }
     }
   ]
