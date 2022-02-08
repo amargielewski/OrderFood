@@ -84,10 +84,10 @@ export const StyledListItem = styled(NavLink)<{
   height: 100%;
   gap: 0 5px;
   font-size: 20px;
+  transition: 0.2s ease-in;
 
   :hover {
     background-color: #fa7a52b3;
-    transition: 0.3s ease-in;
     border-radius: 10px;
     color: white;
     transform: translateY(5px);

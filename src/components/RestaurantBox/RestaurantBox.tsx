@@ -14,6 +14,7 @@ import {
   StyledRegionText,
 } from "./RestaurantBox.styled";
 import { StarIcon } from "../../icons/StarIcon";
+import { RestaurantElement } from "../../types/restaurant";
 
 const images = [
   {
@@ -30,7 +31,7 @@ const images = [
   },
 ];
 
-export const RestaurantBox = () => {
+export const RestaurantBox = ({ name }: RestaurantElement) => {
   return (
     <StyledWrapper>
       <StyledImageRatingContainer>
