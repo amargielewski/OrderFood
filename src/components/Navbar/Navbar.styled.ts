@@ -34,7 +34,7 @@ export const StyledMainWrapper = styled.div`
     position: absolute;
     content: "";
     width: 100%;
-    background: #e0afa0;
+    background: #fa7a52;
     height: 1px;
     bottom: 0;
   }
@@ -75,7 +75,7 @@ export const StyledNavbarListContainer = styled.div`
 `;
 
 export const StyledListItem = styled(NavLink)<{
-  rotation?: boolean;
+  rotation?: 0;
 }>`
   display: flex;
   align-items: center;
@@ -86,14 +86,14 @@ export const StyledListItem = styled(NavLink)<{
   font-size: 20px;
 
   :hover {
-    background-color: #fa7a52;
+    background-color: #fa7a52b3;
     transition: 0.3s ease-in;
     border-radius: 10px;
     color: white;
     transform: translateY(5px);
 
     svg {
-      ${({ rotation }) => rotation && SpinAnimation}
+      ${({ rotation }) => rotation === 0 && SpinAnimation}
     }
   }
 
