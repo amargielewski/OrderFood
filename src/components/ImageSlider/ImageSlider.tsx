@@ -8,6 +8,7 @@ import {
   StyledLeftButton,
   StyledRightButton,
   StyledImage,
+  StyledImageWrapper,
 } from "./ImageSlider.styled";
 
 type Image = {
@@ -41,7 +42,15 @@ export const ImageSlider = ({ images }: ImageSliderProps) => {
           <LeftArrowIcon />
         </StyledLeftButton>
       )}
-      <StyledImage src={images[current].url} />
+      {images.map((slide, index) => {
+        return (
+          index === current && (
+            <StyledImageWrapper key={slide.alt}>
+              <StyledImage src={slide.url} alt="travel" />
+            </StyledImageWrapper>
+          )
+        );
+      })}
       {length !== 1 && (
         <StyledRightButton onClick={nextSlide}>
           <RightArrowIcon />

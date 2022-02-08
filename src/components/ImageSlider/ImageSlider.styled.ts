@@ -44,4 +44,7 @@ export const StyledImage = styled.img`
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
+  transition: 0.5s;
 `;
+
+export const StyledImageWrapper = styled.div``;
