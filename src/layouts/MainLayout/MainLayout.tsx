@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
-import { StyledWrapper } from "./MainLayout.styled";
+import { StyledWrapper, StyledContentContainer } from "./MainLayout.styled";
 
 type MainLayoutProps = PropsWithChildren<{}>;
 
@@ -8,7 +8,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <StyledWrapper>
       <Navbar />
-      {children}
+      <StyledContentContainer>{children}</StyledContentContainer>
     </StyledWrapper>
   );
 };

@@ -16,7 +16,7 @@ export const Navbar = () => {
   return (
     <StyledMainWrapper>
       <StyledContainer>
-        <StyledLogoContainer>
+        <StyledLogoContainer to="/">
           <StyledIconWrapper>
             <PizzaIcon />
           </StyledIconWrapper>
@@ -24,11 +24,11 @@ export const Navbar = () => {
           <StyledSiteLogo>food order</StyledSiteLogo>
         </StyledLogoContainer>
         <StyledNavbarListContainer>
-          <StyledListItem>
+          <StyledListItem to="/">
             <HomeIcon />
             <StyledListItemText>home</StyledListItemText>
           </StyledListItem>
-          <StyledListItem rotation>
+          <StyledListItem to="/settings" rotation>
             <SettingIcon />
             <StyledListItemText>settings</StyledListItemText>
           </StyledListItem>

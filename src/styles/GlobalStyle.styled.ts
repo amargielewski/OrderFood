@@ -7,10 +7,12 @@ ${ResetCss}
 * ,body , html {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-
+    
+    
 }
 
-body {
+body,a {
     background-color: #f4f3ee;
+    color: #202020;
 }
 `;
