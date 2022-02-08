@@ -28,7 +28,7 @@ export const Navbar = () => {
             <HomeIcon />
             <StyledListItemText>home</StyledListItemText>
           </StyledListItem>
-          <StyledListItem>
+          <StyledListItem rotation>
             <SettingIcon />
             <StyledListItemText>settings</StyledListItemText>
           </StyledListItem>

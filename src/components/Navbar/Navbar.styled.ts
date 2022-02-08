@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 const drivingCar = keyframes`
 0% {
@@ -11,6 +11,20 @@ const drivingCar = keyframes`
     transform: translateX(0);
 }
 
+`;
+
+const spin = keyframes`
+        from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(359deg);
+		}
+
+`;
+
+export const SpinAnimation = css`
+  animation: ${spin} 2s infinite linear;
 `;
 
 export const StyledMainWrapper = styled.div`
@@ -57,7 +71,9 @@ export const StyledNavbarListContainer = styled.div`
   gap: 0 30px;
 `;
 
-export const StyledListItem = styled.div`
+export const StyledListItem = styled.div<{
+  rotation?: boolean;
+}>`
   display: flex;
   align-items: center;
   padding: 10px;
@@ -71,8 +87,13 @@ export const StyledListItem = styled.div`
     border-radius: 10px;
     color: white;
     transform: translateY(5px);
+
+    svg {
+      ${({ rotation }) => rotation && SpinAnimation}
+    }
   }
 `;
+
 export const StyledListItemText = styled.p`
   text-transform: capitalize;
   font-weight: 500;
