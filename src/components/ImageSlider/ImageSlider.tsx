@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { LeftArrowIcon } from "../../icons/LeftArrowIcon";
 import { RightArrowIcon } from "../../icons/RightArrowIcon";
 
