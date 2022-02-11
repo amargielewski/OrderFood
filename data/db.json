@@ -1,6 +1,39 @@
 {
-  "posts": [
-    { "content": "Lorem Ipsum Dolor Sit Amet" },
-    { "content": "Amet Sit Dolor Ipsum Lorem" }
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Kebab u Pajdy",
+      "images": [
+        {
+          "url": "https://rl-uk2.azureedge.net/picturemanager/images/OBMNG1/room3.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://rl-uk2.azureedge.net/picturemanager/images/OBMNG1/music.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://rl-uk2.azureedge.net/picturemanager/images/OBMNG1/livingroom.jpg",
+          "alt": ""
+        }
+      ],
+      "starRating": 5,
+      "localization": {
+        "city": "kraków",
+        "address": "florianśka 9",
+        "region": "małopolska"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat maiores pariatur corrupti doloribus aperiam itaque autem! At eum quam, illo, quisquam sit natus, dolor autem odio eos saepe perspiciatis dolorum",
+      "foodType": "kebab",
+      "openHours": {
+        "monday": { "open": "12:00", "close": "22:00" },
+        "tuesday": { "open": "12:00", "close": "22:00" },
+        "wednesday": { "open": "11:00", "close": "21:00" },
+        "thurdsay": { "open": "9:00", "close": "22:00" },
+        "friday": { "open": "15:00", "close": "24:00" },
+        "saturday": { "open": "19:00", "close": "02:30" },
+        "sunday": { "open": "14:30", "close": "23:00" }
+      }
+    }
   ]
 }

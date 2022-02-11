@@ -24,11 +24,11 @@ export const Navbar = () => {
           <StyledSiteLogo>food order</StyledSiteLogo>
         </StyledLogoContainer>
         <StyledNavbarListContainer>
-          <StyledListItem to="/">
+          <StyledListItem to={"/"}>
             <HomeIcon />
             <StyledListItemText>home</StyledListItemText>
           </StyledListItem>
-          <StyledListItem to="/settings" rotation>
+          <StyledListItem to={"/settings"} rotation={0}>
             <SettingIcon />
             <StyledListItemText>settings</StyledListItemText>
           </StyledListItem>
