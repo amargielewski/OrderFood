@@ -9,6 +9,7 @@ export const Main = () => {
 
   return (
     <StyledWrapper>
+      {error && <div>Error</div>}
       {data &&
         data.map((restaurant) => (
           <RestaurantBox key={restaurant.id} {...restaurant} />
