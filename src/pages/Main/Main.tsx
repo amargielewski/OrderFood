@@ -9,7 +9,10 @@ export const Main = () => {
 
   return (
     <StyledWrapper>
-      {data && data.map((props) => <RestaurantBox {...props} />)}
+      {data &&
+        data.map((restaurant) => (
+          <RestaurantBox key={restaurant.id} {...restaurant} />
+        ))}
     </StyledWrapper>
   );
 };

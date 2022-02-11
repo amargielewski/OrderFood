@@ -1,6 +1,7 @@
 {
   "restaurants": [
     {
+      "id": 1,
       "name": "Kebab u Pajdy",
       "images": [
         {
@@ -16,11 +17,13 @@
           "alt": ""
         }
       ],
+      "starRating": 5,
       "localization": {
         "city": "kraków",
         "address": "florianśka 9",
         "region": "małopolska"
       },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat maiores pariatur corrupti doloribus aperiam itaque autem! At eum quam, illo, quisquam sit natus, dolor autem odio eos saepe perspiciatis dolorum",
       "foodType": "kebab",
       "openHours": {
         "monday": { "open": "12:00", "close": "22:00" },

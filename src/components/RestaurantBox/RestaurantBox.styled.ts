@@ -40,6 +40,7 @@ export const StyledDescription = styled.p`
 export const StyledCategory = styled.p`
   font-size: 20px;
   font-weight: 500;
+  text-transform: capitalize;
 `;
 
 export const StyledLocalizationContainer = styled.div`
@@ -51,11 +52,14 @@ export const StyledLocalizationContainer = styled.div`
 export const StyledCityText = styled.p`
   font-size: 20px;
   font-weight: 500;
+  text-transform: capitalize;
 `;
 export const StyledAddressText = styled.p`
+  text-transform: capitalize;
   font-size: 18px;
 `;
 export const StyledRegionText = styled.p`
   font-size: 18px;
+  text-transform: capitalize;
   font-weight: 300;
 `;

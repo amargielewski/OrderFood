@@ -1,9 +1,12 @@
 export type RestaurantElement = {
+  id: number;
+  description: string;
   name: string;
   images: Image[];
   localization: Localization;
   foodType: string;
   openHours: OpenHours;
+  starRating: number;
 };
 
 export type Image = {
