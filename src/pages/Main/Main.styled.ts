@@ -4,6 +4,7 @@ export const StyledWrapper = styled.div`
   width: 100%;
   padding: 0 15px;
   display: flex;
-  flex-direction: column;
-  gap: 40px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 `;
