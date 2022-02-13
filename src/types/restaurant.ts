@@ -21,13 +21,7 @@ export type Localization = {
 };
 
 export type OpenHours = {
-  monday: OpenHoursTypes;
-  tuesday: OpenHoursTypes;
-  wednesday: OpenHoursTypes;
-  thurdsay: OpenHoursTypes;
-  friday: OpenHoursTypes;
-  saturday: OpenHoursTypes;
-  sunday: OpenHoursTypes;
+  [key: string]: OpenHoursTypes;
 };
 
 export type OpenHoursTypes = {
