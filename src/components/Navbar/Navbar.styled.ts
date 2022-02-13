@@ -90,7 +90,7 @@ export const StyledListItem = styled(NavLink)<{
     background-color: #fa7a52b3;
     border-radius: 10px;
     color: white;
-    transform: translateY(5px);
+    transform: translateY(2px);
 
     svg {
       ${({ rotation }) => rotation === 0 && SpinAnimation}

@@ -106,6 +106,8 @@ export const StyledLocalizationTitleBox = styled.div`
   font-size: 25px;
 `;
 
+export const StyledOpenHourContainer = styled.div``;
+
 export const StyledMenuLink = styled(Link)`
   background-color: transparent;
   color: #fa7a52;
@@ -117,9 +119,14 @@ export const StyledMenuLink = styled(Link)`
   text-decoration: none;
   font-size: 20px;
   border-radius: 5px;
-  transition: 0.7s;
+  transition: 0.6s;
   :hover {
     background-color: #fa7a52;
     color: #fafafa;
   }
+`;
+
+export const StyledInfoContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
