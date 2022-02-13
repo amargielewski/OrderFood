@@ -34,6 +34,37 @@
         "saturday": { "open": "19:00", "close": "02:30" },
         "sunday": { "open": "14:30", "close": "23:00" }
       }
+    },
+    {
+      "id": 2,
+      "name": "Pizza Napoli",
+      "images": [
+        {
+          "url": "https://pliki.propertydesign.pl/i/02/94/28/029428_r0_1140.jpg",
+          "alt": ""
+        },
+        {
+          "url": "https://www.kdesign.pl/wp-content/uploads/2018/05/Pizzatopia-by-KDesign-koncept-aranzacja-sieci-pizzerii-04-1280x900.jpg",
+          "alt": ""
+        }
+      ],
+      "starRating": 3.5,
+      "localization": {
+        "city": "kraków",
+        "address": "ul. batorego 9",
+        "region": "małopolska"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat maiores pariatur corrupti doloribus aperiam itaque autem! At eum quam, illo, quisquam sit natus, dolor autem odio eos saepe perspiciatis dolorum",
+      "foodType": "Pizza",
+      "openHours": {
+        "monday": { "open": "12:00", "close": "22:00" },
+        "tuesday": { "open": "12:00", "close": "22:00" },
+        "wednesday": { "open": "11:00", "close": "21:00" },
+        "thurdsay": { "open": "9:00", "close": "22:00" },
+        "friday": { "open": "15:00", "close": "24:00" },
+        "saturday": { "open": "19:00", "close": "02:30" },
+        "sunday": { "open": "14:30", "close": "23:00" }
+      }
     }
   ]
 }

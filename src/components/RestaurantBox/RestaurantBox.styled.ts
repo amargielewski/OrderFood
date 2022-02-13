@@ -7,6 +7,7 @@ export const StyledWrapper = styled.div`
   border-radius: 20px;
   display: flex;
   gap: 0 50px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 `;
 
 export const StyledRatingWrapper = styled.div`
@@ -41,6 +42,12 @@ export const StyledCategory = styled.p`
   font-size: 20px;
   font-weight: 500;
   text-transform: capitalize;
+  background-color: #fa7a52;
+  color: #fafafa;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 10px;
 `;
 
 export const StyledLocalizationContainer = styled.div`
