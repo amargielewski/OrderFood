@@ -4,8 +4,8 @@ export const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
 `;
 
 export const defaulutArrowButton = css`
@@ -40,8 +40,8 @@ export const StyledRightButton = styled.button`
 `;
 
 export const StyledImage = styled.img`
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
   transition: 0.5s;
