@@ -1,13 +1,30 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
-  width: 100%;
+  max-width: 650px;
   background: #fafafa;
   padding: 20px;
   border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  @media (max-width: 1400px) {
+    max-width: 600px;
+  }
+
+  @media (max-width: 1280px) {
+    max-width: 800px;
+    width: 100%;
+  }
+`;
+
+export const StyledContentContainer = styled.div`
   display: flex;
   gap: 0 50px;
-  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 `;
 
 export const StyledRatingWrapper = styled.div`
@@ -54,6 +71,7 @@ export const StyledLocalizationContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px 0;
+  font-size: 30px;
 `;
 
 export const StyledCityText = styled.p`
@@ -69,4 +87,39 @@ export const StyledRegionText = styled.p`
   font-size: 18px;
   text-transform: capitalize;
   font-weight: 300;
+`;
+
+export const StyledLocalizationTitle = styled.p`
+  font-size: 20px;
+  font-weight: 500;
+`;
+
+export const StyledLocalizationTitleBox = styled.div`
+  border: 1px solid #fa7a52;
+  color: #fa7a52;
+  display: flex;
+  gap: 0 10px;
+  max-width: max-content;
+  border-radius: 10px;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 25px;
+`;
+
+export const StyledMenuLink = styled(Link)`
+  background-color: transparent;
+  color: #fa7a52;
+  border: 1px solid #fa7a52;
+  padding: 5px 0;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: 0.7s;
+  :hover {
+    background-color: #fa7a52;
+    color: #fafafa;
+  }
 `;
