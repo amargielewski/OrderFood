@@ -17,10 +17,7 @@ import {
   StyledMenuLink,
   StyledContentContainer,
   StyledOpenHourContainer,
-  StyledDayText,
   StyledInfoContainer,
-  StyledSingleDay,
-  StyledOpenHour,
 } from "./RestaurantBox.styled";
 import { StarIcon } from "../../icons/StarIcon";
 import { RestaurantElement } from "../../types/restaurant";

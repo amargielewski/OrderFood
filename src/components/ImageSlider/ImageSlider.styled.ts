@@ -21,12 +21,12 @@ export const defaulutArrowButton = css`
   font-size: 24px;
   width: 40px;
   height: 40px;
-  background: #fa7a5280;
+  background: #fc4f4f80;
   color: white;
   border-radius: 50%;
   transition: 0.23s ease-in;
   :hover {
-    background: #fa7a52;
+    background: #fc4f4f;
   }
 `;
 

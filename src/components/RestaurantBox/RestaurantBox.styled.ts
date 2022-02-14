@@ -59,7 +59,7 @@ export const StyledCategory = styled.p`
   font-size: 20px;
   font-weight: 500;
   text-transform: capitalize;
-  background-color: #fa7a52;
+  background-color: #fc4f4f;
   color: #fafafa;
   width: 100%;
   text-align: center;
@@ -95,8 +95,8 @@ export const StyledLocalizationTitle = styled.p`
 `;
 
 export const StyledLocalizationTitleBox = styled.div`
-  border: 1px solid #fa7a52;
-  color: #fa7a52;
+  border: 1px solid #fc4f4f;
+  color: #fc4f4f;
   display: flex;
   gap: 0 10px;
   max-width: max-content;
@@ -110,8 +110,8 @@ export const StyledOpenHourContainer = styled.div``;
 
 export const StyledMenuLink = styled(Link)`
   background-color: transparent;
-  color: #fa7a52;
-  border: 1px solid #fa7a52;
+  color: #fc4f4f;
+  border: 1px solid #fc4f4f;
   padding: 5px 0;
   font-weight: 500;
   letter-spacing: 2px;
@@ -121,7 +121,7 @@ export const StyledMenuLink = styled(Link)`
   border-radius: 5px;
   transition: 0.6s;
   :hover {
-    background-color: #fa7a52;
+    background-color: #fc4f4f;
     color: #fafafa;
   }
 `;
