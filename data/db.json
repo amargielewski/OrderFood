@@ -20,7 +20,7 @@
       "starRating": 5,
       "localization": {
         "city": "kraków",
-        "address": "florianśka 9",
+        "address": "ul. florianśka 9",
         "region": "małopolska"
       },
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat maiores pariatur corrupti doloribus aperiam itaque autem! At eum quam, illo, quisquam sit natus, dolor autem odio eos saepe perspiciatis dolorum",
@@ -66,5 +66,11 @@
         "sunday": { "open": "14:30", "close": "23:00" }
       }
     }
-  ]
+  ],
+
+  "details": {
+    "1": {
+      "name": "Kebab u Pajdy"
+    }
+  }
 }
