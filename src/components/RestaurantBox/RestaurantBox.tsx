@@ -20,28 +20,29 @@ import {
   StyledInfoContainer,
 } from "./RestaurantBox.styled";
 import { StarIcon } from "../../icons/StarIcon";
-import { RestaurantElement } from "../../types/restaurant";
 import { LocalizationIcon } from "../../icons/LocalizationIcon";
+import { RestaurantTypes } from "../../types/restaurant";
+
+type RestaurantBoxProps = { id: number } & RestaurantTypes;
 
 export const RestaurantBox = ({
   name,
   description,
-  foodType,
+  type,
   localization,
-  starRating,
+  rating,
   images,
   id,
-  openHours,
-}: RestaurantElement) => {
+}: RestaurantBoxProps) => {
   return (
     <StyledWrapper>
       <StyledContentContainer>
         <StyledImageRatingContainer>
-          <StyledCategory>{foodType}</StyledCategory>
-          <ImageSlider images={images} />
+          <StyledCategory>{type.data.attributes.name}</StyledCategory>
+          <ImageSlider images={images.data} />
           <StyledRatingWrapper>
             <Rating
-              ratingValue={starRating * 20}
+              ratingValue={rating * 20}
               emptyIcon={<StarIcon color="lighray" />}
               fullIcon={<StarIcon color="#ffbc0b" />}
               allowHalfIcon
@@ -60,7 +61,7 @@ export const RestaurantBox = ({
               </StyledLocalizationTitleBox>
               <StyledCityText>{localization.city}</StyledCityText>
               <StyledAddressText>{localization.address}</StyledAddressText>
-              <StyledRegionText>{localization.region}</StyledRegionText>
+              {/* <StyledRegionText>{localization.region}</StyledRegionText> */}
             </StyledLocalizationContainer>
             <StyledOpenHourContainer></StyledOpenHourContainer>
           </StyledInfoContainer>

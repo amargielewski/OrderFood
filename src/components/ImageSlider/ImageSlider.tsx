@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { LeftArrowIcon } from "../../icons/LeftArrowIcon";
 import { RightArrowIcon } from "../../icons/RightArrowIcon";
+import { Images, ImagesDatum } from "../../types/restaurant";
 
 import {
   StyledWrapper,
@@ -10,13 +11,8 @@ import {
   StyledImageWrapper,
 } from "./ImageSlider.styled";
 
-type Image = {
-  url: string;
-  alt?: string;
-};
-
 export type ImageSliderProps = {
-  images: Image[];
+  images: ImagesDatum[];
 };
 
 export const ImageSlider = ({ images }: ImageSliderProps) => {
@@ -44,8 +40,11 @@ export const ImageSlider = ({ images }: ImageSliderProps) => {
       {images.map((slide, index) => {
         return (
           index === current && (
-            <StyledImageWrapper key={slide.alt}>
-              <StyledImage src={slide.url} alt="travel" />
+            <StyledImageWrapper key={slide.id}>
+              <StyledImage
+                src={"http://192.168.1.12:1337" + slide.attributes.url}
+                alt={slide.attributes.caption}
+              />
             </StyledImageWrapper>
           )
         );
