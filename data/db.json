@@ -68,9 +68,58 @@
     }
   ],
 
-  "details": {
-    "1": {
-      "name": "Kebab u Pajdy"
+  "details": [
+    {
+      "id": "1",
+      "name": "Kebab u Pajdy",
+      "starRating": 5,
+      "localization": {
+        "city": "kraków",
+        "address": "ul. florianśka 9",
+        "region": "małopolska"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat maiores pariatur corrupti doloribus aperiam itaque autem! At eum quam, illo, quisquam sit natus, dolor autem odio eos saepe perspiciatis dolorum",
+      "foodType": "kebab",
+      "openHours": {
+        "monday": { "open": "12:00", "close": "22:00" },
+        "tuesday": { "open": "12:00", "close": "22:00" },
+        "wednesday": { "open": "11:00", "close": "21:00" },
+        "thurdsay": { "open": "9:00", "close": "22:00" },
+        "friday": { "open": "15:00", "close": "24:00" },
+        "saturday": { "open": "19:00", "close": "02:30" },
+        "sunday": { "open": "14:30", "close": "23:00" }
+      },
+      "menu": {
+        "drinks": [
+          { "name": "Pepsi", "price": "5.00", "capacity": "500ml" },
+          { "name": "Water", "price": "3.00", "capacity": "1000ml" }
+        ],
+        "food": [
+          { "name": "Kebab XL", "price": "20.00" },
+          { "name": "Big kebab", "price": "15.00" },
+          { "name": "Medium Kebab", "price": "12.00" },
+          { "name": "Small Kebab", "price": "10.00" },
+          { "name": "Salad", "price": "8.00" },
+          { "name": "Fries", "price": "5.00" }
+        ],
+        "sauce": [
+          { "name": "garlic sauce", "price": "2.00" },
+          {
+            "name": "hot sauce",
+            "price": "2.00"
+          },
+          { "name": "mix sauce", "price": "2.00" }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "name": "Kebab u pizdy",
+      "menu": [
+        {
+          "name": "z pieczarakami"
+        }
+      ]
     }
-  }
+  ]
 }
