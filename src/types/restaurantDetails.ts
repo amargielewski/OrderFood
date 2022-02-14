@@ -1,42 +1,45 @@
-export interface RestaurantDetailsTypes {
+export type RestaurantDetailsTypes = {
   id: string;
   name: string;
   starRating: number;
   localization: Localization;
   description: string;
   foodType: string;
-  openHours: OpenHours;
+  openHours: OpenHour[];
   menu: Menu;
-}
+  image: ImageType;
+};
 
-export interface Localization {
+export type Localization = {
   city: string;
   address: string;
   region: string;
-}
+};
 
-export interface Menu {
+export type ImageType = {
+  url: string;
+  alt: string;
+};
+
+export type Menu = {
   drinks: Drink[];
   food: Food[];
   sauce: Food[];
-}
+};
 
-export interface Drink {
+export type Drink = {
   name: string;
   price: string;
   capacity: string;
-}
+};
 
-export interface Food {
+export type Food = {
   name: string;
   price: string;
-}
+};
 
-export interface OpenHours {
-  [key: string]: OpenHoursTypes;
-}
-
-export interface OpenHoursTypes {
+export type OpenHour = {
   open: string;
   close: string;
-}
+  name: string;
+};

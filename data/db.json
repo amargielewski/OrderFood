@@ -80,14 +80,18 @@
       },
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat maiores pariatur corrupti doloribus aperiam itaque autem! At eum quam, illo, quisquam sit natus, dolor autem odio eos saepe perspiciatis dolorum",
       "foodType": "kebab",
-      "openHours": {
-        "monday": { "open": "12:00", "close": "22:00" },
-        "tuesday": { "open": "12:00", "close": "22:00" },
-        "wednesday": { "open": "11:00", "close": "21:00" },
-        "thurdsay": { "open": "9:00", "close": "22:00" },
-        "friday": { "open": "15:00", "close": "24:00" },
-        "saturday": { "open": "19:00", "close": "02:30" },
-        "sunday": { "open": "14:30", "close": "23:00" }
+      "openHours": [
+        { "open": "12:00", "close": "22:00", "name": "mo" },
+        { "open": "12:00", "close": "22:00", "name": "tue" },
+        { "open": "11:00", "close": "21:00", "name": "wed" },
+        { "open": "9:00", "close": "22:00", "name": "thu" },
+        { "open": "15:00", "close": "24:00", "name": "fri" },
+        { "open": "19:00", "close": "02:30", "name": "sat" },
+        { "open": "14:30", "close": "23:00", "name": "sun" }
+      ],
+      "image": {
+        "url": "https://rl-uk2.azureedge.net/picturemanager/images/OBMNG1/room3.jpg",
+        "alt": "picture"
       },
       "menu": {
         "drinks": [
