@@ -30,16 +30,6 @@ import { StyledOpenHoursContainer } from "../RestaurantDetails/RestaurantDetails
 
 type RestaurantBoxProps = { id: number } & RestaurantAttributes;
 
-const obj = {
-  monday: "12.00 - 20.00",
-  tuesday: "12.00 - 20.00",
-  wednesday: "12.00 - 20.00",
-  thurdsay: "12.00 - 20.00",
-  friday: "12.00 - 20.00",
-  saturday: "12.00 - 24.00",
-  sunday: "12.00 - 24.00",
-};
-
 const weekDays = [
   "monday",
   "tuesday",

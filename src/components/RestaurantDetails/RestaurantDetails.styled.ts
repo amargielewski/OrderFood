@@ -29,8 +29,9 @@ export const StyledTitleRatingContainer = styled.div`
 `;
 
 export const StyledTitle = styled.p`
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
+  text-transform: capitalize;
 `;
 
 export const StyledLocalizationContainer = styled.div`
@@ -53,10 +54,68 @@ export const StyledRegionText = styled.p`
   text-transform: capitalize;
 `;
 
-export const StyledOpenHoursContainer = styled.div`
+export const StyledOpenHoursButton = styled.div`
   display: flex;
   gap: 0 20px;
+  font-size: 20px;
+  color: #fc4f4f;
+  max-width: max-content;
+  border: 1px solid #fc4f4f;
+  padding: 10px 50px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  transition: 0.5s;
+
+  :hover {
+    background-color: #fc4f4f;
+    color: #fafafa;
+  }
 `;
+
+export const StyledOpenHoursButtonText = styled.p`
+  font-weight: 500;
+`;
+
+export const StyledOpenHoursContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px 0;
+  position: relative;
+`;
+
+export const StyledOpenHoursBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px 0;
+  position: absolute;
+  background-color: #fafafa;
+  padding: 10px;
+  border-radius: 8px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #fc4f4f;
+`;
+
+export const StyledSingleHourBox = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+`;
+
+export const StyledSingleHourDayText = styled.p`
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 100px;
+`;
+export const StyledSingleHour = styled.p`
+  font-size: 16px;
+  font-weight: 400;
+`;
+
 export const StyledSingleTimeBox = styled.div`
   display: flex;
   align-items: center;
@@ -68,90 +127,9 @@ export const StyledDayText = styled.p`
   font-weight: 500;
   text-transform: capitalize;
 `;
-export const StyledTimeBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px 0;
-  align-items: center;
-  position: relative;
-
-  ::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    background-color: #fc4f4f;
-    height: 1px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-`;
-
-export const StyledTimeText = styled.p`
-  font-size: 16px;
-`;
-
-export const StyledMenuTitle = styled.p`
-  font-size: 24px;
-  color: #fc4f4f;
-  font-weight: 500;
-`;
-
-export const StyledMenuContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px 0;
-  margin-bottom: 50px;
-`;
-
-export const StyledMenuName = styled.p`
-  font-size: 20px;
-  font-weight: 600;
-  color: #fc4f4f;
-  border: 1px solid #fc4f4f;
-  padding: 5px 10px;
-  border-radius: 8px;
-`;
-
-export const StyledMenuCategoryContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 20px 0;
-`;
-export const StyledDrinksContainer = styled.div``;
-export const StyledSausaceContainer = styled.div``;
-
-export const StyledSingleMenuListItemBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 700px;
-  position: relative;
-
-  ::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    background-color: lightgray;
-    height: 1px;
-    bottom: -5px;
-  }
-`;
-
-export const StyledMenuItemName = styled.p`
-  font-size: 20px;
-  font-weight: 500;
-`;
-export const StyledMenuItemPrice = styled.p`
-  font-size: 20px;
-  font-weight: 400;
-`;
 
 export const StyledImage = styled.img`
-  width: 400px;
+  width: 500px;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
