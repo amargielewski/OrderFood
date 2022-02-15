@@ -1,6 +1,6 @@
 import { Rating } from "react-simple-star-rating";
 import { StarIcon } from "../../icons/StarIcon";
-import { RestaurantDetailsTypes } from "../../types/restaurantDetails";
+import { RestaurantAttributes } from "../../types/restaurantDetails";
 import {
   StyledAddressText,
   StyledCityText,
@@ -27,31 +27,32 @@ import {
 export const RestaurantDetails = ({
   name,
   localization,
-  starRating,
-  openHours,
   menu,
-  image,
-}: RestaurantDetailsTypes) => {
+  rating,
+  images,
+}: RestaurantAttributes) => {
   return (
     <StyledWrapper>
       <StyledInfoContainer>
         <StyledTitleRatingContainer>
           <StyledTitle>{name}</StyledTitle>
           <Rating
-            ratingValue={starRating * 20}
+            ratingValue={rating * 20}
             emptyIcon={<StarIcon color="lighray" />}
             fullIcon={<StarIcon color="#ffbc0b" />}
             allowHalfIcon
             readonly
           />
-          <StyledImage src={image.url} alt={image.alt} />
+          <StyledImage
+            src={"http://192.168.1.12:1337" + images.data[0].attributes.url}
+            alt={images.data[0].attributes.caption}
+          />
         </StyledTitleRatingContainer>
         <StyledLocalizationContainer>
           <StyledCityText>{localization.city}</StyledCityText>
           <StyledAddressText>{localization.address}</StyledAddressText>
-          <StyledRegionText>{localization.region}</StyledRegionText>
         </StyledLocalizationContainer>
-        <StyledOpenHoursContainer>
+        {/* <StyledOpenHoursContainer>
           {openHours &&
             openHours.map(({ name, open, close }) => (
               <StyledSingleTimeBox key={name}>
@@ -62,9 +63,9 @@ export const RestaurantDetails = ({
                 </StyledTimeBox>
               </StyledSingleTimeBox>
             ))}
-        </StyledOpenHoursContainer>
+        </StyledOpenHoursContainer> */}
       </StyledInfoContainer>
-      <StyledMenuContainer>
+      {/* <StyledMenuContainer>
         <StyledMenuCategoryContainer>
           <StyledMenuName>Food</StyledMenuName>
           {menu.food.map(({ name, price }) => (
@@ -93,7 +94,7 @@ export const RestaurantDetails = ({
             </StyledSingleMenuListItemBox>
           ))}
         </StyledMenuCategoryContainer>
-      </StyledMenuContainer>
+      </StyledMenuContainer> */}
     </StyledWrapper>
   );
 };

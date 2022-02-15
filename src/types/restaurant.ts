@@ -1,23 +1,24 @@
-export type Restaurants = {
-  data: RestaurantsDatum[];
+export type RestaurantTypes = {
+  data: RestaurantDatum[];
   meta: Meta;
 };
 
-export type RestaurantsDatum = {
+export type RestaurantDatum = {
   id: number;
-  attributes: RestaurantTypes;
+  attributes: RestaurantAttributes;
 };
 
-export type RestaurantTypes = {
-  createdAt: string;
-  updatedAt: string;
+export type RestaurantAttributes = {
+  createdAt: Date;
+  updatedAt: Date;
   name: string;
   rating: number;
   description: string;
-  images: Images;
+  images: ImagesTypes;
   localization: Localization;
   hours: Hours;
   type: Type;
+  menu: Menu[];
 };
 
 export type Hours = {
@@ -31,7 +32,7 @@ export type Hours = {
   sunday: string;
 };
 
-export type Images = {
+export type ImagesTypes = {
   data: ImagesDatum[];
 };
 
@@ -48,29 +49,35 @@ export type FluffyAttributes = {
   height: number;
   formats: Formats;
   hash: string;
-  ext: string;
-  mime: string;
+  ext: EXT;
+  mime: MIME;
   size: number;
   url: string;
   previewUrl: null;
   provider: string;
   provider_metadata: null;
-  createdAt: string;
-  updatedAt: string;
+  createdAt: Date;
+  updatedAt: Date;
 };
+
+export enum EXT {
+  JPEG = ".jpeg",
+  Jpg = ".jpg",
+  PNG = ".png",
+}
 
 export type Formats = {
-  thumbnail: StrapiImage;
-  large: StrapiImage;
-  medium: StrapiImage;
-  small: StrapiImage;
+  thumbnail: Large;
+  large?: Large;
+  medium?: Large;
+  small: Large;
 };
 
-export type StrapiImage = {
+export type Large = {
   name: string;
   hash: string;
-  ext: string;
-  mime: string;
+  ext: EXT;
+  mime: MIME;
   width: number;
   height: number;
   size: number;
@@ -78,10 +85,22 @@ export type StrapiImage = {
   url: string;
 };
 
+export enum MIME {
+  ImageJPEG = "image/jpeg",
+  ImagePNG = "image/png",
+}
+
 export type Localization = {
   id: number;
   city: string;
   address: string;
+};
+
+export type Menu = {
+  id: number;
+  name: string;
+  price: number;
+  kategoria: string;
 };
 
 export type Type = {
@@ -95,8 +114,8 @@ export type Data = {
 
 export type DataAttributes = {
   name: string;
-  createdAt: string;
-  updatedAt: string;
+  createdAt: Date;
+  updatedAt: Date;
 };
 
 export type Meta = {
