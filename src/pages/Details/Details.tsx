@@ -7,8 +7,9 @@ import { LeftArrowIcon } from "../../icons/LeftArrowIcon";
 export const Details = () => {
   const { id } = useParams();
 
-  // const { data, error, isLoading } = useRestaurantsDetails({ id });
+  const { data, error, isLoading } = useRestaurantsDetails({ id });
 
+  console.log(data?.data);
   const navigate = useNavigate();
   return (
     <StyledWrapper>
@@ -17,7 +18,7 @@ export const Details = () => {
         <LeftArrowIcon />
       </StyledNavigateButton>
 
-      {/* {data && <RestaurantDetails {...data[0]} />} */}
+      {data && <RestaurantDetails {...data.data.attributes} />}
     </StyledWrapper>
   );
 };

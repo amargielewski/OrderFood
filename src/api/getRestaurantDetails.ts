@@ -7,10 +7,10 @@ type getRestaurantsProps = {
 };
 
 export const getRestaurantsDetails = ({ id }: getRestaurantsProps) =>
-  apiService.get(`/details?id=${id}`);
+  apiService.get(`/restaurants/${id}?populate=*`);
 
 export const useRestaurantsDetails = ({ id }: getRestaurantsProps) => {
-  const [data, setData] = useState<RestaurantDetailsTypes[] | null>(null);
+  const [data, setData] = useState<RestaurantDetailsTypes | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 

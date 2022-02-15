@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { LeftArrowIcon } from "../../icons/LeftArrowIcon";
 import { RightArrowIcon } from "../../icons/RightArrowIcon";
-import { Images, ImagesDatum } from "../../types/restaurant";
+import { ImagesDatum } from "../../types/restaurant";
 
 import {
   StyledWrapper,

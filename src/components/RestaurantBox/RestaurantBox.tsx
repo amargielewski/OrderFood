@@ -23,12 +23,13 @@ import {
   StyledSingleHour,
 } from "./RestaurantBox.styled";
 import { StarIcon } from "../../icons/StarIcon";
-import { RestaurantTypes } from "../../types/restaurant";
+import { RestaurantAttributes } from "../../types/restaurant";
 import { ClockIcon } from "../../icons/ClockIcon";
 import { useState } from "react";
 import { StyledOpenHoursContainer } from "../RestaurantDetails/RestaurantDetails.styled";
 
-type RestaurantBoxProps = { id: number } & RestaurantTypes;
+type RestaurantBoxProps = { id: number } & RestaurantAttributes;
+
 const obj = {
   monday: "12.00 - 20.00",
   tuesday: "12.00 - 20.00",
