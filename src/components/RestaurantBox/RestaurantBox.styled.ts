@@ -41,7 +41,7 @@ export const StyledImageRatingContainer = styled.div`
 export const StyledAboutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px 0;
+  gap: 20px 0;
 `;
 
 export const StyledName = styled.p`
@@ -69,13 +69,12 @@ export const StyledCategory = styled.p`
 
 export const StyledLocalizationContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 10px 0;
-  font-size: 30px;
+  align-items: center;
+  gap: 0 10px;
 `;
 
 export const StyledCityText = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   text-transform: capitalize;
 `;
@@ -88,25 +87,6 @@ export const StyledRegionText = styled.p`
   text-transform: capitalize;
   font-weight: 300;
 `;
-
-export const StyledLocalizationTitle = styled.p`
-  font-size: 20px;
-  font-weight: 500;
-`;
-
-export const StyledLocalizationTitleBox = styled.div`
-  border: 1px solid #fc4f4f;
-  color: #fc4f4f;
-  display: flex;
-  gap: 0 10px;
-  max-width: max-content;
-  border-radius: 10px;
-  align-items: center;
-  padding: 5px 10px;
-  font-size: 25px;
-`;
-
-export const StyledOpenHourContainer = styled.div``;
 
 export const StyledMenuLink = styled(Link)`
   background-color: transparent;
@@ -126,7 +106,64 @@ export const StyledMenuLink = styled(Link)`
   }
 `;
 
-export const StyledInfoContainer = styled.div`
+export const StyledOpenHourButton = styled.div`
+  border: none;
+  font-size: 20px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  max-width: max-content;
+  padding: 5px 10px;
+  gap: 0 10px;
+  background-color: #fafafa;
+  border: 1px solid #fc4f4f;
+  border-radius: 8px;
+  color: #fc4f4f;
+
+  transition: 0.5s;
+  :hover {
+    background-color: #fc4f4f;
+    color: #fafafa;
+  }
+`;
+
+export const StyledOpenHourButtonText = styled.p`
+  font-weight: 500;
+`;
+
+export const StyledOpenHourContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+  position: relative;
+`;
+
+export const StyledOpenHoursBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px 0;
+  position: absolute;
+  background-color: #fafafa;
+
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #fc4f4f;
+  bottom: -170px;
+`;
+
+export const StyledSingleHourBox = styled.div`
+  display: flex;
+  align-items: center;
+
+  gap: 0 10px;
+`;
+
+export const StyledSingleHourDayText = styled.p`
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 100px;
+`;
+export const StyledSingleHour = styled.p`
+  font-size: 16px;
+  font-weight: 400;
 `;

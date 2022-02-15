@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "createdAt": "2022-02-14T21:14:14.800Z",
+        "updatedAt": "2022-02-14T21:39:26.171Z",
+        "name": "U pajdy",
+        "rating": 5,
+        "description": "Zajebisty kebabik, kozak opcja na lato i na zime, ale bardziej na wiosne, troche daleko ale i tak warto ruszyc dupe bo kozak kebabik pozdro500",
+        "images": {
+          "data": [
+            {
+              "id": 1,
+              "attributes": {
+                "name": "Screenshot 2022-02-07 at 14.12.39.png",
+                "alternativeText": "Screenshot 2022-02-07 at 14.12.39.png",
+                "caption": "Screenshot 2022-02-07 at 14.12.39.png",
+                "width": 1680,
+                "height": 1082,
+                "formats": {
+                  "thumbnail": {
+                    "name": "thumbnail_Screenshot 2022-02-07 at 14.12.39.png",
+                    "hash": "thumbnail_Screenshot_2022_02_07_at_14_12_39_a5f5ba9b2d",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "width": 242,
+                    "height": 156,
+                    "size": 42.87,
+                    "path": null,
+                    "url": "/uploads/thumbnail_Screenshot_2022_02_07_at_14_12_39_a5f5ba9b2d.png"
+                  },
+                  "large": {
+                    "name": "large_Screenshot 2022-02-07 at 14.12.39.png",
+                    "hash": "large_Screenshot_2022_02_07_at_14_12_39_a5f5ba9b2d",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "width": 1000,
+                    "height": 644,
+                    "size": 486.63,
+                    "path": null,
+                    "url": "/uploads/large_Screenshot_2022_02_07_at_14_12_39_a5f5ba9b2d.png"
+                  },
+                  "medium": {
+                    "name": "medium_Screenshot 2022-02-07 at 14.12.39.png",
+                    "hash": "medium_Screenshot_2022_02_07_at_14_12_39_a5f5ba9b2d",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "width": 750,
+                    "height": 483,
+                    "size": 305.39,
+                    "path": null,
+                    "url": "/uploads/medium_Screenshot_2022_02_07_at_14_12_39_a5f5ba9b2d.png"
+                  },
+                  "small": {
+                    "name": "small_Screenshot 2022-02-07 at 14.12.39.png",
+                    "hash": "small_Screenshot_2022_02_07_at_14_12_39_a5f5ba9b2d",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "width": 500,
+                    "height": 322,
+                    "size": 153.47,
+                    "path": null,
+                    "url": "/uploads/small_Screenshot_2022_02_07_at_14_12_39_a5f5ba9b2d.png"
+                  }
+                },
+                "hash": "Screenshot_2022_02_07_at_14_12_39_a5f5ba9b2d",
+                "ext": ".png",
+                "mime": "image/png",
+                "size": 869,
+                "url": "/uploads/Screenshot_2022_02_07_at_14_12_39_a5f5ba9b2d.png",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "createdAt": "2022-02-14T21:13:19.224Z",
+                "updatedAt": "2022-02-14T21:13:19.224Z"
+              }
+            }
+          ]
+        },
+        "localization": {
+          "id": 1,
+          "city": "Kraków",
+          "address": "ul Kobierzynska 7 "
+        },
+        "hours": {
+          "id": 1,
+          "monday": "12.00 - 20.00",
+          "tuesday": "12.00 - 20.00",
+          "wednesday": "12.00 - 20.00",
+          "thurdsay": "12.00 - 20.00",
+          "friday": "12.00 - 20.00",
+          "saturday": "12.00 - 24.00",
+          "sunday": "12.00 - 24.00"
+        },
+        "type": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "Kebab",
+              "createdAt": "2022-02-14T20:58:45.752Z",
+              "updatedAt": "2022-02-14T20:58:45.752Z"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": { "page": 1, "pageSize": 25, "pageCount": 1, "total": 1 }
+  }
+}

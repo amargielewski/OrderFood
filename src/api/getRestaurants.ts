@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { apiService } from "../services/api";
-import { RestaurantElement } from "../types/restaurant";
+import { Restaurants } from "../types/restaurant";
 
-export const getRestaurants = () => apiService.get("/restaurants");
+export const getRestaurants = () => apiService.get("/restaurants?populate=*");
 
 export const useRestaurants = () => {
-  const [data, setData] = useState<RestaurantElement[] | null>(null);
+  const [data, setData] = useState<Restaurants | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
