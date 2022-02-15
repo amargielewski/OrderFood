@@ -9,7 +9,6 @@ export const Details = () => {
 
   const { data, error, isLoading } = useRestaurantsDetails({ id });
 
-  console.log(data?.data);
   const navigate = useNavigate();
   return (
     <StyledWrapper>

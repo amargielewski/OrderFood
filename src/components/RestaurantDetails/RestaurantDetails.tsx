@@ -1,28 +1,45 @@
+import { useState } from "react";
 import { Rating } from "react-simple-star-rating";
+import { ClockIcon } from "../../icons/ClockIcon";
 import { StarIcon } from "../../icons/StarIcon";
-import { RestaurantAttributes } from "../../types/restaurantDetails";
+import { Menu, RestaurantAttributes } from "../../types/restaurantDetails";
 import {
   StyledAddressText,
   StyledCityText,
-  StyledDayText,
   StyledInfoContainer,
   StyledLocalizationContainer,
-  StyledMenuCategoryContainer,
-  StyledMenuContainer,
-  StyledMenuItemName,
-  StyledMenuItemPrice,
-  StyledMenuName,
   StyledOpenHoursContainer,
   StyledRegionText,
-  StyledSingleMenuListItemBox,
-  StyledSingleTimeBox,
-  StyledTimeBox,
-  StyledTimeText,
   StyledTitle,
   StyledTitleRatingContainer,
   StyledWrapper,
   StyledImage,
+  StyledOpenHoursButton,
+  StyledSingleHourBox,
+  StyledSingleHourDayText,
+  StyledSingleHour,
+  StyledOpenHoursBox,
+  StyledOpenHoursButtonText,
 } from "./RestaurantDetails.styled";
+
+const weekDays = [
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thurdsay",
+  "friday",
+  "saturday",
+  "sunday",
+];
+
+const getHours = (obj: any) => {
+  return weekDays.map((weekDay) => (
+    <StyledSingleHourBox key={weekDay}>
+      <StyledSingleHourDayText>{weekDay}:</StyledSingleHourDayText>
+      <StyledSingleHour>{obj[weekDay]}</StyledSingleHour>
+    </StyledSingleHourBox>
+  ));
+};
 
 export const RestaurantDetails = ({
   name,
@@ -30,7 +47,11 @@ export const RestaurantDetails = ({
   menu,
   rating,
   images,
+  hours,
 }: RestaurantAttributes) => {
+  const [displayHours, setDisplayHours] = useState(false);
+
+  
   return (
     <StyledWrapper>
       <StyledInfoContainer>
@@ -52,49 +73,28 @@ export const RestaurantDetails = ({
           <StyledCityText>{localization.city}</StyledCityText>
           <StyledAddressText>{localization.address}</StyledAddressText>
         </StyledLocalizationContainer>
-        {/* <StyledOpenHoursContainer>
-          {openHours &&
-            openHours.map(({ name, open, close }) => (
-              <StyledSingleTimeBox key={name}>
-                <StyledDayText>{name}:</StyledDayText>
-                <StyledTimeBox>
-                  <StyledTimeText>{open}</StyledTimeText>
-                  <StyledTimeText>{close}</StyledTimeText>
-                </StyledTimeBox>
-              </StyledSingleTimeBox>
-            ))}
-        </StyledOpenHoursContainer> */}
-      </StyledInfoContainer>
-      {/* <StyledMenuContainer>
-        <StyledMenuCategoryContainer>
-          <StyledMenuName>Food</StyledMenuName>
-          {menu.food.map(({ name, price }) => (
-            <StyledSingleMenuListItemBox key={name}>
-              <StyledMenuItemName>{name}</StyledMenuItemName>
-              <StyledMenuItemPrice>{price} zł</StyledMenuItemPrice>
-            </StyledSingleMenuListItemBox>
-          ))}
-        </StyledMenuCategoryContainer>
-        <StyledMenuCategoryContainer>
-          <StyledMenuName>Drinks</StyledMenuName>
 
-          {menu.drinks.map(({ name, price }) => (
-            <StyledSingleMenuListItemBox key={name}>
-              <StyledMenuItemName>{name}</StyledMenuItemName>
-              <StyledMenuItemPrice>{price} zł</StyledMenuItemPrice>
-            </StyledSingleMenuListItemBox>
-          ))}
-        </StyledMenuCategoryContainer>
-        <StyledMenuCategoryContainer>
-          <StyledMenuName>Sauce</StyledMenuName>
-          {menu.sauce.map(({ name, price }) => (
-            <StyledSingleMenuListItemBox key={name}>
-              <StyledMenuItemName>{name}</StyledMenuItemName>
-              <StyledMenuItemPrice>{price} zł</StyledMenuItemPrice>
-            </StyledSingleMenuListItemBox>
-          ))}
-        </StyledMenuCategoryContainer>
-      </StyledMenuContainer> */}
+        <StyledOpenHoursContainer>
+          <StyledOpenHoursButton
+            onMouseEnter={() => setDisplayHours(true)}
+            onMouseLeave={() => setDisplayHours(false)}
+          >
+            <StyledOpenHoursButtonText>Open Hours</StyledOpenHoursButtonText>
+            <ClockIcon />
+          </StyledOpenHoursButton>
+
+          {displayHours && (
+            <StyledOpenHoursBox>{getHours(hours)}</StyledOpenHoursBox>
+          )}
+        </StyledOpenHoursContainer>
+      </StyledInfoContainer>
+      {menu.map((item) => {
+        return (
+          <div key={item.id}>
+            {item.name}-{item.price}
+          </div>
+        );
+      })}
     </StyledWrapper>
   );
 };

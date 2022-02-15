@@ -114,10 +114,10 @@ export const StyledOpenHourButton = styled.div`
   max-width: max-content;
   padding: 5px 10px;
   gap: 0 10px;
-  background-color: #fafafa;
   border: 1px solid #fc4f4f;
   border-radius: 8px;
   color: #fc4f4f;
+  background-color: #fafafa;
 
   transition: 0.5s;
   :hover {
