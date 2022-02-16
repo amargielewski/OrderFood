@@ -20,6 +20,14 @@ import {
   StyledSingleHour,
   StyledOpenHoursBox,
   StyledOpenHoursButtonText,
+  StyledMenuContainer,
+  StyledMenuCategoryTitle,
+  StyledMenuCategoryContainer,
+  StyledSingleMenuItem,
+  StyledSingleItemName,
+  StyledSingleItemPrice,
+  StyledMenuCategoryItemList,
+  StyledTypeText,
 } from "./RestaurantDetails.styled";
 
 const weekDays = [
@@ -48,15 +56,23 @@ export const RestaurantDetails = ({
   rating,
   images,
   hours,
+  type,
 }: RestaurantAttributes) => {
   const [displayHours, setDisplayHours] = useState(false);
 
-  
+  const getCategories = (categoryName: string) => {
+    return menu.filter(
+      (menuItem) =>
+        menuItem.category.toUpperCase() === categoryName.toUpperCase()
+    );
+  };
+
   return (
     <StyledWrapper>
       <StyledInfoContainer>
         <StyledTitleRatingContainer>
           <StyledTitle>{name}</StyledTitle>
+          <StyledTypeText>{type.data.attributes.name}</StyledTypeText>
           <Rating
             ratingValue={rating * 20}
             emptyIcon={<StarIcon color="lighray" />}
@@ -88,13 +104,47 @@ export const RestaurantDetails = ({
           )}
         </StyledOpenHoursContainer>
       </StyledInfoContainer>
-      {menu.map((item) => {
-        return (
-          <div key={item.id}>
-            {item.name}-{item.price}
-          </div>
-        );
-      })}
+      <StyledMenuContainer>
+        <StyledMenuCategoryContainer>
+          <StyledMenuCategoryTitle>Food</StyledMenuCategoryTitle>
+          <StyledMenuCategoryItemList>
+            {getCategories("food").map((item) => {
+              return (
+                <StyledSingleMenuItem key={item.id}>
+                  <StyledSingleItemName>{item.name}</StyledSingleItemName>
+                  <StyledSingleItemPrice>{item.price} zl</StyledSingleItemPrice>
+                </StyledSingleMenuItem>
+              );
+            })}
+          </StyledMenuCategoryItemList>
+        </StyledMenuCategoryContainer>
+        <StyledMenuCategoryContainer>
+          <StyledMenuCategoryTitle>Drinks</StyledMenuCategoryTitle>
+          <StyledMenuCategoryItemList>
+            {getCategories("drinks").map((item) => {
+              return (
+                <StyledSingleMenuItem key={item.id}>
+                  <StyledSingleItemName>{item.name}</StyledSingleItemName>
+                  <StyledSingleItemPrice>{item.price} zl</StyledSingleItemPrice>
+                </StyledSingleMenuItem>
+              );
+            })}
+          </StyledMenuCategoryItemList>
+        </StyledMenuCategoryContainer>
+        <StyledMenuCategoryContainer>
+          <StyledMenuCategoryTitle>Sauces</StyledMenuCategoryTitle>
+          <StyledMenuCategoryItemList>
+            {getCategories("Sauces").map((item) => {
+              return (
+                <StyledSingleMenuItem key={item.id}>
+                  <StyledSingleItemName>{item.name}</StyledSingleItemName>
+                  <StyledSingleItemPrice>{item.price} zl</StyledSingleItemPrice>
+                </StyledSingleMenuItem>
+              );
+            })}
+          </StyledMenuCategoryItemList>
+        </StyledMenuCategoryContainer>
+      </StyledMenuContainer>
     </StyledWrapper>
   );
 };
