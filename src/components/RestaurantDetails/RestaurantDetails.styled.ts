@@ -23,6 +23,7 @@ export const StyledInfoContainer = styled.div`
 export const StyledTitleRatingContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
   gap: 10px 0;
   font-size: 25px;
@@ -97,6 +98,7 @@ export const StyledOpenHoursBox = styled.div`
   left: 50%;
   transform: translateX(-50%);
   border: 1px solid #fc4f4f;
+  z-index: 1;
 `;
 
 export const StyledSingleHourBox = styled.div`
@@ -129,8 +131,73 @@ export const StyledDayText = styled.p`
 `;
 
 export const StyledImage = styled.img`
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
+`;
+
+export const StyledMenuContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0;
+`;
+
+export const StyledMenuCategoryTitle = styled.p`
+  font-size: 24px;
+  font-weight: 500;
+  color: #fc4f4f;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #fc4f4f;
+`;
+
+export const StyledMenuCategoryContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px 0;
+`;
+
+export const StyledSingleMenuItem = styled.div`
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  ::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: -5px;
+    background: lightgray;
+  }
+`;
+
+export const StyledSingleItemName = styled.p`
+  font-size: 20px;
+  font-weight: 400;
+`;
+export const StyledSingleItemPrice = styled.p`
+  font-size: 20px;
+  font-weight: 400;
+`;
+
+export const StyledMenuCategoryItemList = styled.div`
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+`;
+
+export const StyledTypeText = styled.p`
+  font-size: 18px;
+  font-weight: 400;
+  color: #fc4f4f;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #fc4f4f;
 `;

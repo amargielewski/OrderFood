@@ -100,7 +100,7 @@ export type Menu = {
   id: number;
   name: string;
   price: number;
-  kategoria: string;
+  category: string;
 };
 
 export type Type = {
