@@ -72,7 +72,6 @@ export const RestaurantDetails = ({
       <StyledInfoContainer>
         <StyledTitleRatingContainer>
           <StyledTitle>{name}</StyledTitle>
-          <StyledTypeText>{type.data.attributes.name}</StyledTypeText>
           <Rating
             ratingValue={rating * 20}
             emptyIcon={<StarIcon color="lighray" />}
@@ -80,11 +79,12 @@ export const RestaurantDetails = ({
             allowHalfIcon
             readonly
           />
-          <StyledImage
-            src={"http://192.168.1.12:1337" + images.data[0].attributes.url}
-            alt={images.data[0].attributes.caption}
-          />
         </StyledTitleRatingContainer>
+        <StyledTypeText>{type.data.attributes.name}</StyledTypeText>
+        <StyledImage
+          src={"http://192.168.1.12:1337" + images.data[0].attributes.url}
+          alt={images.data[0].attributes.caption}
+        />
         <StyledLocalizationContainer>
           <StyledCityText>{localization.city}</StyledCityText>
           <StyledAddressText>{localization.address}</StyledAddressText>
