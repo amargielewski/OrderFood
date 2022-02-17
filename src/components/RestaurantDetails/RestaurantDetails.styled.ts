@@ -22,12 +22,17 @@ export const StyledInfoContainer = styled.div`
 `;
 
 export const StyledTitleRatingContainer = styled.div`
+  margin-top: 20;
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
   gap: 10px 0;
   font-size: 25px;
+
+  @media (max-width: 600px) {
+    margin-top: 40px;
+  } ;
 `;
 
 export const StyledTitle = styled.p`
@@ -204,4 +209,10 @@ export const StyledTypeText = styled.p`
   position: absolute;
   left: 0;
   top: 0;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    border-top-right-radius: 20px;
+    text-align: center;
+  }
 `;
