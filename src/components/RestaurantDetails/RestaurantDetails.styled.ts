@@ -11,6 +11,7 @@ export const StyledWrapper = styled.div`
   padding: 15px;
   margin-bottom: 50px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: relative;
 `;
 
 export const StyledInfoContainer = styled.div`
@@ -194,10 +195,13 @@ export const StyledMenuCategoryItemList = styled.div`
 `;
 
 export const StyledTypeText = styled.p`
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
-  color: #fc4f4f;
-  padding: 5px 10px;
-  border-radius: 8px;
-  border: 1px solid #fc4f4f;
+  color: #fafafa;
+  padding: 10px 30px;
+  border-top-left-radius: 20px;
+  background-color: #fc4f4f;
+  position: absolute;
+  left: 0;
+  top: 0;
 `;
