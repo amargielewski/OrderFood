@@ -8,7 +8,7 @@ export const Details = () => {
   const { id } = useParams();
 
   const { data, error, isLoading } = useRestaurantsDetails({ id });
-
+  console.log(data);
   const navigate = useNavigate();
   return (
     <StyledWrapper>
