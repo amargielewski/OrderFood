@@ -3,6 +3,7 @@ import { Rating } from "react-simple-star-rating";
 import { ClockIcon } from "../../icons/ClockIcon";
 import { StarIcon } from "../../icons/StarIcon";
 import { Menu, RestaurantAttributes } from "../../types/restaurantDetails";
+import { MenuItem } from "../MenuItem/MenuItem";
 import {
   StyledAddressText,
   StyledCityText,
@@ -23,9 +24,6 @@ import {
   StyledMenuContainer,
   StyledMenuCategoryTitle,
   StyledMenuCategoryContainer,
-  StyledSingleMenuItem,
-  StyledSingleItemName,
-  StyledSingleItemPrice,
   StyledMenuCategoryItemList,
   StyledTypeText,
 } from "./RestaurantDetails.styled";
@@ -69,6 +67,7 @@ export const RestaurantDetails = ({
 
   return (
     <StyledWrapper>
+      <StyledTypeText>{type.data.attributes.name}</StyledTypeText>
       <StyledInfoContainer>
         <StyledTitleRatingContainer>
           <StyledTitle>{name}</StyledTitle>
@@ -80,7 +79,6 @@ export const RestaurantDetails = ({
             readonly
           />
         </StyledTitleRatingContainer>
-        <StyledTypeText>{type.data.attributes.name}</StyledTypeText>
         <StyledImage
           src={"http://192.168.1.12:1337" + images.data[0].attributes.url}
           alt={images.data[0].attributes.caption}
@@ -109,12 +107,7 @@ export const RestaurantDetails = ({
           <StyledMenuCategoryTitle>Food</StyledMenuCategoryTitle>
           <StyledMenuCategoryItemList>
             {getCategories("food").map((item) => {
-              return (
-                <StyledSingleMenuItem key={item.id}>
-                  <StyledSingleItemName>{item.name}</StyledSingleItemName>
-                  <StyledSingleItemPrice>{item.price} zl</StyledSingleItemPrice>
-                </StyledSingleMenuItem>
-              );
+              return <MenuItem {...item} key={item.id} />;
             })}
           </StyledMenuCategoryItemList>
         </StyledMenuCategoryContainer>
@@ -122,12 +115,7 @@ export const RestaurantDetails = ({
           <StyledMenuCategoryTitle>Drinks</StyledMenuCategoryTitle>
           <StyledMenuCategoryItemList>
             {getCategories("drinks").map((item) => {
-              return (
-                <StyledSingleMenuItem key={item.id}>
-                  <StyledSingleItemName>{item.name}</StyledSingleItemName>
-                  <StyledSingleItemPrice>{item.price} zl</StyledSingleItemPrice>
-                </StyledSingleMenuItem>
-              );
+              return <MenuItem {...item} key={item.id} />;
             })}
           </StyledMenuCategoryItemList>
         </StyledMenuCategoryContainer>
@@ -135,12 +123,7 @@ export const RestaurantDetails = ({
           <StyledMenuCategoryTitle>Sauces</StyledMenuCategoryTitle>
           <StyledMenuCategoryItemList>
             {getCategories("Sauces").map((item) => {
-              return (
-                <StyledSingleMenuItem key={item.id}>
-                  <StyledSingleItemName>{item.name}</StyledSingleItemName>
-                  <StyledSingleItemPrice>{item.price} zl</StyledSingleItemPrice>
-                </StyledSingleMenuItem>
-              );
+              return <MenuItem {...item} key={item.id} />;
             })}
           </StyledMenuCategoryItemList>
         </StyledMenuCategoryContainer>

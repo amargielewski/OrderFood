@@ -19,6 +19,9 @@ export const StyledInfoContainer = styled.div`
   flex-direction: column;
   gap: 15px 0;
   align-items: center;
+  padding-bottom: 20px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 `;
 
 export const StyledTitleRatingContainer = styled.div`
@@ -148,6 +151,7 @@ export const StyledMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px 0;
+  margin-bottom: 50px;
 `;
 
 export const StyledMenuCategoryTitle = styled.p`
@@ -167,36 +171,12 @@ export const StyledMenuCategoryContainer = styled.div`
   gap: 20px 0;
 `;
 
-export const StyledSingleMenuItem = styled.div`
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-
-  ::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 1px;
-    bottom: -5px;
-    background: lightgray;
-  }
-`;
-
-export const StyledSingleItemName = styled.p`
-  font-size: 20px;
-  font-weight: 400;
-`;
-export const StyledSingleItemPrice = styled.p`
-  font-size: 20px;
-  font-weight: 400;
-`;
-
 export const StyledMenuCategoryItemList = styled.div`
   width: 100%;
   max-width: 800px;
   display: flex;
   flex-direction: column;
-  gap: 20px 0;
+  gap: 25px 0;
 `;
 
 export const StyledTypeText = styled.p`
