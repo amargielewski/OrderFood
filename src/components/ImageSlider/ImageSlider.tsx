@@ -2,6 +2,7 @@ import { useState } from "react";
 import { LeftArrowIcon } from "../../icons/LeftArrowIcon";
 import { RightArrowIcon } from "../../icons/RightArrowIcon";
 import { ImagesDatum } from "../../types/restaurant";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import {
   StyledWrapper,
@@ -29,7 +30,7 @@ export const ImageSlider = ({ images }: ImageSliderProps) => {
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
-
+  // http://192.168.1.12:1337
   return (
     <StyledWrapper>
       {length !== 1 && (
@@ -37,18 +38,18 @@ export const ImageSlider = ({ images }: ImageSliderProps) => {
           <LeftArrowIcon />
         </StyledLeftButton>
       )}
-      {images.map((slide, index) => {
-        return (
-          index === current && (
-            <StyledImageWrapper key={slide.id}>
-              <StyledImage
-                src={"http://192.168.1.12:1337" + slide.attributes.url}
-                alt={slide.attributes.caption}
-              />
-            </StyledImageWrapper>
-          )
-        );
-      })}
+      <TransitionGroup>
+        <CSSTransition
+          key={"http://192.168.1.12:1337" + images[current].attributes.url}
+          timeout={500}
+          classNames="slide"
+        >
+          <StyledImage
+            src={"http://192.168.1.12:1337" + images[current].attributes.url}
+            alt="travel"
+          />
+        </CSSTransition>
+      </TransitionGroup>
       {length !== 1 && (
         <StyledRightButton onClick={nextSlide}>
           <RightArrowIcon />
