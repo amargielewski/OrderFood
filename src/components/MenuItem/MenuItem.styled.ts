@@ -16,13 +16,14 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledText = css`
-  font-size: 20px;
+  font-size: ${({ theme }) => theme.fontSize.m}px;
 `;
 
 export const StyledItemName = styled.p`
   ${StyledText}
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
 `;
 export const StyledItemPrice = styled.p`
   ${StyledText}
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
 `;

@@ -12,7 +12,7 @@ ${ResetCss}
 }
 
 body,a {
-    background-color: #f4f3ee;
     color: #202020;
+    background-color: #f4f3ee;
 }
 `;

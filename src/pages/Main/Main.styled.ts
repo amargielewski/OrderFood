@@ -7,4 +7,5 @@ export const StyledWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 50px;
 `;

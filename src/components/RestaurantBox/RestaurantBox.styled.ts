@@ -28,7 +28,7 @@ export const StyledContentContainer = styled.div`
 `;
 
 export const StyledRatingWrapper = styled.div`
-  font-size: 35px;
+  font-size: ${({ theme }) => theme.fontSize.xl}px;
 `;
 
 export const StyledImageRatingContainer = styled.div`
@@ -46,18 +46,18 @@ export const StyledAboutContainer = styled.div`
 
 export const StyledName = styled.p`
   text-transform: capitalize;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.fontSize.l}px;
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
 `;
 
 export const StyledDescription = styled.p`
-  font-size: 16px;
-  font-weight: 400;
+  font-size: ${({ theme }) => theme.fontSize.xs}px;
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
 `;
 
 export const StyledCategory = styled.p`
-  font-size: 20px;
-  font-weight: 500;
+  font-size: ${({ theme }) => theme.fontSize.m}px;
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   text-transform: capitalize;
   background-color: #fc4f4f;
   color: #fafafa;
@@ -74,18 +74,18 @@ export const StyledLocalizationContainer = styled.div`
 `;
 
 export const StyledCityText = styled.p`
-  font-size: 18px;
-  font-weight: 500;
+  font-size: ${({ theme }) => theme.fontSize.s}px;
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   text-transform: capitalize;
 `;
 export const StyledAddressText = styled.p`
   text-transform: capitalize;
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.fontSize.s}px;
 `;
 export const StyledRegionText = styled.p`
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.fontSize.s}px;
   text-transform: capitalize;
-  font-weight: 300;
+  font-weight: ${({ theme }) => theme.fontWeight.light};
 `;
 
 export const StyledMenuLink = styled(Link)`
@@ -97,7 +97,7 @@ export const StyledMenuLink = styled(Link)`
   letter-spacing: 2px;
   text-align: center;
   text-decoration: none;
-  font-size: 20px;
+  font-size: ${({ theme }) => theme.fontSize.m}px;
   border-radius: 5px;
   transition: 0.6s;
   :hover {
@@ -108,7 +108,7 @@ export const StyledMenuLink = styled(Link)`
 
 export const StyledOpenHourButton = styled.div`
   border: none;
-  font-size: 20px;
+  font-size: ${({ theme }) => theme.fontSize.m}px;
   display: flex;
   align-items: center;
   max-width: max-content;
@@ -127,7 +127,7 @@ export const StyledOpenHourButton = styled.div`
 `;
 
 export const StyledOpenHourButtonText = styled.p`
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
 `;
 
 export const StyledOpenHourContainer = styled.div`
@@ -159,11 +159,11 @@ export const StyledSingleHourBox = styled.div`
 
 export const StyledSingleHourDayText = styled.p`
   text-transform: capitalize;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: ${({ theme }) => theme.fontSize.xs}px;
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   min-width: 100px;
 `;
 export const StyledSingleHour = styled.p`
-  font-size: 16px;
-  font-weight: 400;
+  font-size: ${({ theme }) => theme.fontSize.xs}px;
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
 `;
