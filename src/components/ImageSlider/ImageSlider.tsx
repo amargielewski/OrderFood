@@ -9,7 +9,6 @@ import {
   StyledLeftButton,
   StyledRightButton,
   StyledImage,
-  StyledImageWrapper,
 } from "./ImageSlider.styled";
 
 export type ImageSliderProps = {
@@ -30,7 +29,6 @@ export const ImageSlider = ({ images }: ImageSliderProps) => {
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
-  // http://192.168.1.12:1337
   return (
     <StyledWrapper>
       {length !== 1 && (

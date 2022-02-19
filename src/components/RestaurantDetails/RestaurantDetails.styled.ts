@@ -31,7 +31,7 @@ export const StyledTitleRatingContainer = styled.div`
   width: 100%;
   align-items: center;
   gap: 10px 0;
-  font-size: 25px;
+  font-size: ${({ theme }) => theme.fontSize.xl}px;
 
   @media (max-width: 600px) {
     margin-top: 40px;
@@ -39,8 +39,8 @@ export const StyledTitleRatingContainer = styled.div`
 `;
 
 export const StyledTitle = styled.p`
-  font-size: 28px;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.fontSize.xl}px;
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
   text-transform: capitalize;
 `;
 
@@ -52,8 +52,8 @@ export const StyledLocalizationContainer = styled.div`
 
 export const StyledCityText = styled.p`
   text-transform: capitalize;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: ${({ theme }) => theme.fontSize.s}px;
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
 `;
 
 export const StyledAddressText = styled.p`
@@ -67,7 +67,7 @@ export const StyledRegionText = styled.p`
 export const StyledOpenHoursButton = styled.div`
   display: flex;
   gap: 0 20px;
-  font-size: 20px;
+  font-size: ${({ theme }) => theme.fontSize.m}px;
   color: #fc4f4f;
   max-width: max-content;
   border: 1px solid #fc4f4f;
@@ -83,7 +83,7 @@ export const StyledOpenHoursButton = styled.div`
 `;
 
 export const StyledOpenHoursButtonText = styled.p`
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
 `;
 
 export const StyledOpenHoursContainer = styled.div`
@@ -118,13 +118,13 @@ export const StyledSingleHourBox = styled.div`
 
 export const StyledSingleHourDayText = styled.p`
   text-transform: capitalize;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: ${({ theme }) => theme.fontSize.xs}px;
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   min-width: 100px;
 `;
 export const StyledSingleHour = styled.p`
-  font-size: 16px;
-  font-weight: 400;
+  font-size: ${({ theme }) => theme.fontSize.xs}px;
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
 `;
 
 export const StyledSingleTimeBox = styled.div`
@@ -134,8 +134,8 @@ export const StyledSingleTimeBox = styled.div`
 `;
 
 export const StyledDayText = styled.p`
-  font-size: 18px;
-  font-weight: 500;
+  font-size: ${({ theme }) => theme.fontSize.s}px;
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   text-transform: capitalize;
 `;
 
@@ -155,8 +155,8 @@ export const StyledMenuContainer = styled.div`
 `;
 
 export const StyledMenuCategoryTitle = styled.p`
-  font-size: 24px;
-  font-weight: 500;
+  font-size: ${({ theme }) => theme.fontSize.l}px;
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   color: #fc4f4f;
   padding: 5px 10px;
   border-radius: 8px;
@@ -180,8 +180,8 @@ export const StyledMenuCategoryItemList = styled.div`
 `;
 
 export const StyledTypeText = styled.p`
-  font-size: 20px;
-  font-weight: 400;
+  font-size: ${({ theme }) => theme.fontSize.m}px;
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
   color: #fafafa;
   padding: 10px 30px;
   border-top-left-radius: 20px;

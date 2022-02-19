@@ -51,9 +51,9 @@ export const StyledContainer = styled.div`
 
 export const StyledSiteLogo = styled.h2`
   margin-left: 10px;
-  font-size: 30px;
+  font-size: ${({ theme }) => theme.fontSize.xl}px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
 `;
 
 export const StyledLogoContainer = styled(Link)`
@@ -64,7 +64,7 @@ export const StyledLogoContainer = styled(Link)`
 `;
 
 export const StyledIconWrapper = styled.div`
-  font-size: 40px;
+  font-size: ${({ theme }) => theme.fontSize.xll}px;
   animation: ${drivingCar} 1.5s ease;
 `;
 
@@ -83,7 +83,7 @@ export const StyledListItem = styled(NavLink)<{
   padding: 10px;
   height: 100%;
   gap: 0 5px;
-  font-size: 20px;
+  font-size: ${({ theme }) => theme.fontSize.m}px;
   transition: 0.2s ease-in;
 
   :hover {
@@ -106,5 +106,5 @@ export const StyledListItem = styled(NavLink)<{
 
 export const StyledListItemText = styled.p`
   text-transform: capitalize;
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
 `;

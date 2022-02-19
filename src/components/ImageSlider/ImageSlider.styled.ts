@@ -63,5 +63,3 @@ export const StyledImage = styled.img`
   position: absolute;
   top: 0;
 `;
-
-export const StyledImageWrapper = styled.div``;

@@ -103,30 +103,36 @@ export const RestaurantDetails = ({
         </StyledOpenHoursContainer>
       </StyledInfoContainer>
       <StyledMenuContainer>
-        <StyledMenuCategoryContainer>
-          <StyledMenuCategoryTitle>Food</StyledMenuCategoryTitle>
-          <StyledMenuCategoryItemList>
-            {getCategories("food").map((item) => {
-              return <MenuItem {...item} key={item.id} />;
-            })}
-          </StyledMenuCategoryItemList>
-        </StyledMenuCategoryContainer>
-        <StyledMenuCategoryContainer>
-          <StyledMenuCategoryTitle>Drinks</StyledMenuCategoryTitle>
-          <StyledMenuCategoryItemList>
-            {getCategories("drinks").map((item) => {
-              return <MenuItem {...item} key={item.id} />;
-            })}
-          </StyledMenuCategoryItemList>
-        </StyledMenuCategoryContainer>
-        <StyledMenuCategoryContainer>
-          <StyledMenuCategoryTitle>Sauces</StyledMenuCategoryTitle>
-          <StyledMenuCategoryItemList>
-            {getCategories("Sauces").map((item) => {
-              return <MenuItem {...item} key={item.id} />;
-            })}
-          </StyledMenuCategoryItemList>
-        </StyledMenuCategoryContainer>
+        {getCategories("food").length !== 0 && (
+          <StyledMenuCategoryContainer>
+            <StyledMenuCategoryTitle>Food</StyledMenuCategoryTitle>
+            <StyledMenuCategoryItemList>
+              {getCategories("food").map((item) => {
+                return <MenuItem {...item} key={item.id} />;
+              })}
+            </StyledMenuCategoryItemList>
+          </StyledMenuCategoryContainer>
+        )}
+        {getCategories("drinks").length !== 0 && (
+          <StyledMenuCategoryContainer>
+            <StyledMenuCategoryTitle>Drinks</StyledMenuCategoryTitle>
+            <StyledMenuCategoryItemList>
+              {getCategories("drinks").map((item) => {
+                return <MenuItem {...item} key={item.id} />;
+              })}
+            </StyledMenuCategoryItemList>
+          </StyledMenuCategoryContainer>
+        )}
+        {getCategories("sauces").length !== 0 && (
+          <StyledMenuCategoryContainer>
+            <StyledMenuCategoryTitle>Sauces</StyledMenuCategoryTitle>
+            <StyledMenuCategoryItemList>
+              {getCategories("sauces").map((item) => {
+                return <MenuItem {...item} key={item.id} />;
+              })}
+            </StyledMenuCategoryItemList>
+          </StyledMenuCategoryContainer>
+        )}
       </StyledMenuContainer>
     </StyledWrapper>
   );
